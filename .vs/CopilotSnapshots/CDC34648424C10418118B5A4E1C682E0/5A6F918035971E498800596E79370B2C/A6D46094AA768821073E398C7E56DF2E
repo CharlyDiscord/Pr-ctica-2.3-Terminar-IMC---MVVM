@@ -1,0 +1,217 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using IMCMVVM_CALC.Models;
+using Microsoft.Extensions.Options;
+
+namespace IMCMVVM_CALC.ViewModels
+{
+    public class IMCViewMoel : INotifyPropertyChanged
+    {
+        // Los Entry capturan texto, incluso cuando representan números.
+        public string PesoT { get; set; } = "";
+        public string EstaturaT { get; set; } = "";
+
+        private string resultado = "Ingresa tus datos";
+        public string Resultado
+        {
+            get { return resultado; }
+            set
+            {
+                resultado = value;
+                PropertyChanged?.Invoke(
+                    this,
+                    new PropertyChangedEventArgs(nameof(Resultado)));
+            }
+        }
+
+        private string clasificacion = "";
+        public string Clasificacion
+        {
+            get { return clasificacion; }
+            set
+            {
+                clasificacion = value;
+                PropertyChanged?.Invoke(
+                    this,
+                    new PropertyChangedEventArgs(nameof(Clasificacion)));
+            }
+        }
+
+        public ICommand CalcularCommand { get; }
+
+        public IMCViewMoel()
+        {
+            CalcularCommand = new Command(Calcular);
+        }
+
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        private void Calcular()
+        {
+            // Validar el peso.
+            bool pesoValidado = double.TryParse(PesoT, out double peso);
+
+            if (!pesoValidado || !double.IsFinite(peso) || peso <= 0)
+            {
+                Resultado = "Escribe un peso válido mayor que cero.";
+                Clasificacion = "";
+                return;
+            }
+
+            // Validar la estatura.
+            bool estaturaValidada = double.TryParse(EstaturaT, out double estatura);
+
+            if (!estaturaValidada || !double.IsFinite(estatura) || estatura <= 0)
+            {
+                Resultado = "Escribe una estatura válida mayor que cero.";
+                Clasificacion = "";
+                return;
+            }
+
+            Persona persona = new Persona
+            {
+                Peso = peso,
+                Estatura = estatura
+            };
+
+            double imc = persona.CalcularIMC();
+
+            if (!double.IsFinite(imc))
+            {
+                Resultado = "Revisa el peso y la estatura.";
+                Clasificacion = "";
+                return;
+            }
+
+            if (imc < 18.5)
+            {
+                Clasificacion = "Peso bajo";
+            }
+            else if (imc < 25)
+            {
+                Clasificacion = "Peso normal";
+            }
+            else if (imc < 30)
+            {
+                Clasificacion = "Sobrepeso";
+            }
+            else
+            {
+                Clasificacion = "Obesidad";
+            }
+
+            Resultado = $"Tu IMC es: {imc:F2}";
+        }
+    }
+}<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IMCMVVM_CALC.Views.IMCPage"
+             xmlns:viewmodels="clr-namespace:IMCMVVM_CALC.ViewModels"
+             x:DataType="viewmodels:IMCViewMoel"
+             Title="IMCPage">
+    <VerticalStackLayout Padding="24" Spacing="16">
+        <Label Text="Calcular IMC"
+               FontSize="26"
+               FontAttributes="Bold"/>
+
+        <Label Text="Peso en kilogramos"/>
+        <Entry Placeholder="Ejemplo: 70"
+               Text="{Binding PesoT, Mode=TwoWay}"/>
+
+        <Label Text="Estatura en metros"/>
+        <Entry Placeholder="Ejemplo: 1.75"
+               Text="{Binding EstaturaT, Mode=TwoWay}"/>
+
+        <Button Text="Calcular IMC"
+                Command="{Binding CalcularCommand}"/>
+
+        <Label Text="{Binding Resultado}"/>
+        <Label Text="{Binding Clasificacion}"
+               FontAttributes="Bold"
+               FontSize="18"/>
+    </VerticalStackLayout>
+</ContentPage>using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using IMCMVVM_CALC.Models;
+using Microsoft.Extensions.Options;
+
+namespace IMCMVVM_CALC.ViewModels
+{
+    public class IMCViewMoel : INotifyPropertyChanged
+    {
+        //los entrys capturan texto , incluso al describir num
+        public string PesoT { get; set; } = "";
+        public string EstaturaT { get; set; } = "";
+
+        private string resultado = "ingresa tus datos";
+        public string Resultado
+        {
+            get { return resultado; }
+            set {
+                resultado = value;
+                //Avisar al label que el resultado cambio
+                PropertyChanged?.Invoke(this, 
+                    new PropertyChangedEventArgs(nameof(Resultado)));
+            } 
+        }
+        public ICommand CalcularCommand { get;}        
+        public IMCViewMoel()
+        { 
+            //al ejecutar el comando se llama a calcular
+            CalcularCommand = new Command(Calcular);
+        }
+        // EL BINDING ESCUCHA ESTE EVENTO
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        private void Calcular()
+        {
+            //Validamos cada campo por separado
+            double peso;
+            bool pesoValidado = double.TryParse(PesoT, out peso);
+
+            if (pesoValidado = false || double.IsFinite(peso)|| peso <= 0)
+            {
+                Resultado = "Escribe un peso valido mayor que cero.";
+                return;
+            }
+            double estatura;
+            bool estaturaValidado= double.TryParse(PesoT, out estatura);
+
+            if (estaturaValidado = false || double.IsFinite(estatura) || estatura <= 0)
+            {
+                Resultado = "Escribe una estatura valida mayor que cero.";
+                return;
+            }
+            //crear el modelo y le asignamos datos 
+            Persona persona = new Persona();
+            persona.Peso = peso;
+            persona.Estatura = estatura;
+
+            //el modelo persona realiza la operacion o el calculo
+            double imc = persona.CalcularIMC();
+            //evitamos mostrar un resultado numerico invalido
+
+            if (double.IsFinite(imc))
+            {
+                Resultado = "Revisa el peso y la estatura";
+                return;
+            }
+
+            //F2 muestra el numero con 2 decimales
+            Resultado = "Tu IMC es: " + imc.ToString("F2");
+
+        }
+     
+    }
+}

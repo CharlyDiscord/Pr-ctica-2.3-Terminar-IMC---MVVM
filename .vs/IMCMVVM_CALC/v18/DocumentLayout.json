@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\CharlySayan\\Downloads\\IMCMVVM_CALC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{89F55A65-FD5B-4894-BD75-070AEC4D229C}|IMCMVVM_CALC.csproj|c:\\users\\charlysayan\\downloads\\imcmvvm_calc\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{89F55A65-FD5B-4894-BD75-070AEC4D229C}|IMCMVVM_CALC.csproj|solutionrelative:resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89F55A65-FD5B-4894-BD75-070AEC4D229C}|IMCMVVM_CALC.csproj|c:\\users\\charlysayan\\downloads\\imcmvvm_calc\\viewmodels\\imcviewmoel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89F55A65-FD5B-4894-BD75-070AEC4D229C}|IMCMVVM_CALC.csproj|solutionrelative:viewmodels\\imcviewmoel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89F55A65-FD5B-4894-BD75-070AEC4D229C}|IMCMVVM_CALC.csproj|c:\\users\\charlysayan\\downloads\\imcmvvm_calc\\views\\imcpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{89F55A65-FD5B-4894-BD75-070AEC4D229C}|IMCMVVM_CALC.csproj|solutionrelative:views\\imcpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CharlySayan\\.copilot\\plans\\plan-plan-para-corregir-errores-en-viewmodelsimcviewmoel.cs.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|MarkdownSecurePreview"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89F55A65-FD5B-4894-BD75-070AEC4D229C}|IMCMVVM_CALC.csproj|c:\\users\\charlysayan\\downloads\\imcmvvm_calc\\imcmvvm_calc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{89F55A65-FD5B-4894-BD75-070AEC4D229C}|IMCMVVM_CALC.csproj|solutionrelative:imcmvvm_calc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "plan-plan-para-corregir-errores-en-viewmodelsimcviewmoel.cs.md [Versi\u00F3n preliminar]",
+              "DocumentMoniker": "C:\\Users\\CharlySayan\\.copilot\\plans\\plan-plan-para-corregir-errores-en-viewmodelsimcviewmoel.cs.md",
+              "RelativeDocumentMoniker": "..\\..\\.copilot\\plans\\plan-plan-para-corregir-errores-en-viewmodelsimcviewmoel.cs.md",
+              "ToolTip": "C:\\Users\\CharlySayan\\.copilot\\plans\\plan-plan-para-corregir-errores-en-viewmodelsimcviewmoel.cs.md [Versi\u00F3n preliminar]",
+              "RelativeToolTip": "..\\..\\.copilot\\plans\\plan-plan-para-corregir-errores-en-viewmodelsimcviewmoel.cs.md [Versi\u00F3n preliminar]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-10-31T06:38:07.182Z",
+              "EditorCaption": " [Versi\u00F3n preliminar]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Styles.xaml",
+              "DocumentMoniker": "C:\\Users\\CharlySayan\\Downloads\\IMCMVVM_CALC\\Resources\\Styles\\Styles.xaml",
+              "RelativeDocumentMoniker": "Resources\\Styles\\Styles.xaml",
+              "ToolTip": "C:\\Users\\CharlySayan\\Downloads\\IMCMVVM_CALC\\Resources\\Styles\\Styles.xaml",
+              "RelativeToolTip": "Resources\\Styles\\Styles.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-10-31T06:38:05.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IMCPage.xaml",
+              "DocumentMoniker": "C:\\Users\\CharlySayan\\Downloads\\IMCMVVM_CALC\\Views\\IMCPage.xaml",
+              "RelativeDocumentMoniker": "Views\\IMCPage.xaml",
+              "ToolTip": "C:\\Users\\CharlySayan\\Downloads\\IMCMVVM_CALC\\Views\\IMCPage.xaml",
+              "RelativeToolTip": "Views\\IMCPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-10-31T06:38:04.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IMCViewMoel.cs",
+              "DocumentMoniker": "C:\\Users\\CharlySayan\\Downloads\\IMCMVVM_CALC\\ViewModels\\IMCViewMoel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\IMCViewMoel.cs",
+              "ToolTip": "C:\\Users\\CharlySayan\\Downloads\\IMCMVVM_CALC\\ViewModels\\IMCViewMoel.cs",
+              "RelativeToolTip": "ViewModels\\IMCViewMoel.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAnwG8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T06:31:38.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IMCMVVM_CALC",
+              "DocumentMoniker": "C:\\Users\\CharlySayan\\Downloads\\IMCMVVM_CALC\\IMCMVVM_CALC.csproj",
+              "RelativeDocumentMoniker": "IMCMVVM_CALC.csproj",
+              "ToolTip": "C:\\Users\\CharlySayan\\Downloads\\IMCMVVM_CALC\\IMCMVVM_CALC.csproj",
+              "RelativeToolTip": "IMCMVVM_CALC.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-31T06:30:24.12Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
